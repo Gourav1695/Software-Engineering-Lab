@@ -1,0 +1,20 @@
+->Testing network bandwidth refers to the process of measuring the amount of data that can be transmitted over a network connection between two devices in a given amount of time. The bandwidth is usually measured in bits per second (bps), kilobits per second (Kbps), megabits per second (Mbps), or gigabits per second (Gbps).
+
+->Testing network bandwidth is important for various reasons, such as determining the maximum speed of a network connection, identifying network congestion or bottlenecks, evaluating network performance, and troubleshooting network issues. By measuring the bandwidth, network administrators can determine the available capacity of a network and optimize its performance accordingly.
+
+->Bandwidth and throughput both concern network data. Network bandwidth defines how much data can possibly travel in a network in a period of time. Network throughput refers to how much data actually transfers during a period of time.
+
+->iperf -c 192.168.1.20 -u -b 100M -l 1000 -t 60 -i 10
+
+This command runs Iperf in client mode and connects to a server with IP address 192.168.1.20. It uses UDP protocol (-u option) and limits the bandwidth to 100 Mbps (-b 100M option). The size of each packet sent is 1000 bytes (-l 1000 option) and the test runs for 60 seconds (-t 60 option). Finally, the results are reported every 10 seconds (-i 10 option).
+
+Here's what each option means in more detail:
+
+    -c 192.168.1.20: Specifies the IP address of the server to connect to.
+    -u: Specifies that UDP protocol should be used instead of TCP.
+    -b 100M: Specifies the bandwidth to be used in bits per second. In this case, the bandwidth is set to 100 Mbps.
+    -l 1000: Specifies the size of each packet sent in bytes. In this case, each packet is 1000 bytes.
+    -t 60: Specifies the duration of the test in seconds. In this case, the test runs for 60 seconds.
+    -i 10: Specifies the interval at which results are reported in seconds. In this case, the results are reported every 10 seconds.
+
+Overall, this command will run a UDP test between the client and server for 60 seconds, with a bandwidth limit of 100 Mbps and packet size of 1000 bytes. The results will be reported every 10 seconds.
